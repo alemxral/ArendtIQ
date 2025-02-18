@@ -23,7 +23,7 @@
     --colour-5: #181818;
     --colour-6: #242424;
 
-    --accent: #8b3dff;
+    --accent: #56476b;
     --blur-bg: #16101b66;
     --blur-border: #84719040;
     --user-input: #ac87bb;
@@ -221,7 +221,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-    outline: 1px solid var(--blur-border);
+   
 }
 
 .message .user:after {
@@ -231,9 +231,10 @@ body {
     right: 0;
     height: 60%;
     width: 60%;
-    background: var(--colour-3);
-    filter: blur(10px) opacity(0.5);
+    background: transparent;
+    filter: blur(0px) opacity(0.5);
     z-index: 10000;
+    display: none;
 }
 
 .message .content {
@@ -267,6 +268,7 @@ body {
     background: transparent;
     border: 1px dashed var(--conversations);
     border-radius: var(--border-radius-1);
+   
 }
 
 .new_convo span {
@@ -346,7 +348,7 @@ body {
 input[type="checkbox"] {
     height: 0;
     width: 0;
-    display: none;
+    
 }
 
 label {
@@ -364,6 +366,7 @@ label {
     position: relative;
     overflow: hidden;
     transition: 0.33s;
+   
 }
 
 label:after {
@@ -458,6 +461,12 @@ select {
     cursor: default;
     border: 1px dashed var(--conversations)
 }
+
+.bottom_buttons .info h1 {
+    font-size: 1.2em;
+    margin: 0;
+    font-weight: bold;
+  }
 
 .bottom_buttons {
     width: 100%;
@@ -732,6 +741,7 @@ a:-webkit-any-link {
     overflow: hidden;
     outline: none;
     padding: 6px 16px;
+    display: none;
 }
 
 .color-picker input[type="radio"]:checked {
