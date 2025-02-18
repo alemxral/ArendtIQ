@@ -312,8 +312,8 @@ const load_conversation = async (conversation_id) => {
                     ${item.role == "assistant" ? gpt_image : user_image}
                     ${
                       item.role == "assistant"
-                        ? `<i class="fa-regular fa-phone-arrow-down-left"></i>`
-                        : `<i class="fa-regular fa-phone-arrow-up-right"></i>`
+                        ? `<i class=""></i>`
+                        : `<i class=""></i>`
                     }
                 </div>
                 <div class="content">
@@ -393,15 +393,16 @@ const load_conversations = async (limit, offset, loader) => {
     box_conversations.innerHTML += `
     <div class="convo" id="convo-${conversation.id}">
       <div class="left" onclick="set_conversation('${conversation.id}')">
-          <i class="fa-regular fa-comments"></i>
+          <i class="fa-solid fa-comments"></i>  <!-- Changed to solid for visibility -->
           <span class="convo-title">${conversation.title}</span>
       </div>
-      <i onclick="show_option('${conversation.id}')" class="fa-regular fa-trash" id="conv-${conversation.id}"></i>
-      <i onclick="delete_conversation('${conversation.id}')" class="fa-regular fa-check" id="yes-${conversation.id}" style="display:none;"></i>
-      <i onclick="hide_option('${conversation.id}')" class="fa-regular fa-x" id="not-${conversation.id}" style="display:none;"></i>
+      <i onclick="show_option('${conversation.id}')" class="fa-solid fa-trash" id="conv-${conversation.id}"></i>
+      <i onclick="delete_conversation('${conversation.id}')" class="fa-solid fa-check" id="yes-${conversation.id}" style="display:none;"></i>
+      <i onclick="hide_option('${conversation.id}')" class="fa-solid fa-xmark" id="not-${conversation.id}" style="display:none;"></i>
     </div>
     `;
-  }
+}
+
 
   document.querySelectorAll(`code`).forEach((el) => {
     hljs.highlightElement(el);
